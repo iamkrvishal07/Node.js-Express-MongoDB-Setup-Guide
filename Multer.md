@@ -130,6 +130,17 @@ Instead of storing the entire `req.file` object, only the file path or filename 
 
 ### What is `multipart/form-data`?
 
+Multer is a middleware for handling `multipart/form-data`, which is primarily used to handle file uploads in Node.js and Express applications.
+
+## What is multipart/form-data?
+`multipart/form-data` is used to send **files (like images, PDFs, etc.), text fields, and other form data** in a single request. It allows both **binary (file) data** and **text data** to be transmitted together properly.
+
+For example, if you upload:
+- A **profile picture** (`image.jpg`)
+- A **username** (`"JohnDoe"`)
+
+Both will be sent in the same request but in **separate parts**. This is why it's called **"multipart"**!
+
 - It is an encoding type used for submitting files via forms.
 - Unlike `application/json`, it allows binary file data to be sent along with text fields.
 - Each field in the form, including the file, is sent as a separate part of the request body.
